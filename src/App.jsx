@@ -8,7 +8,7 @@ class ProductAdd extends React.Component {
 		e.preventDefault();
 		const product = {
 			category: document.getElementById("category").value,
-			price: document.getElementById("price").value,
+			price: document.getElementById("price").value.slice(1),
 			name: document.getElementById("name").value,
 			image: document.getElementById("image").value
 		}
@@ -33,7 +33,7 @@ class ProductAdd extends React.Component {
 					</div>
 					<div className="input-group">
 						<label htmlFor="price">Price:</label>
-						<input type="number" id="price" />
+						<input type="text" id="price" defaultValue="$" />
 					</div>
 					<div className="input-group">
 						<label htmlFor="name">Product Name:</label>
